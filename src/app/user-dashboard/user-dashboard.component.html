@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="container loading" *ngIf="isLoading">
+    <img src="../assets/loading.gif" alt="Loading" />
+</div>
+
+<div class="container-fluid-non-center light-grey-bg" *ngIf="!isLoading">
+    <div class="container">
+        <div class="heading-div">
+            <h3 class="bold">User Dashboard</h3>
+        </div>
+        <div class="dashboard-container">
+            <div class="dashboard-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Car Model</th>
+                            <th>Towing Company</th>
+                            <th>Status</th>
+                            <th>Your Bid</th>
+                            <th>View Auction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let listing of userBidListings">
+                            <td>{{ listing.make }} {{ listing.model }}</td>
+                            <td>{{ listing.towing_company }}</td>
+                            <td>
+                                <span [ngClass]="getStatusBadgeClass(listing.status)">
+                                    {{listing.status}}
+                                </span>
+                            </td>
+                            <td>{{ listing.bid_amount }}</td>
+                            <td><a [routerLink]="['/auction-listing', listing.listingCode]" class="btn btn-primary">View Auction</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

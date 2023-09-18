@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<section class="jumbotron text-left text-white" id="home-jumbotron">
+    <div class="container">
+        <h1>Buy and Sell Impounded Vehicles</h1>
+        <p class="lead">
+            Canada's leading marketplace for abandoned and
+          unclaimed vehicles
+        </p>
+        <a routerLink="/auctions" class="btn btn-primary clear-button">
+            View all
+          auctions
+        </a>
+    </div>
+</section>
+<div class="regular-div bg-light">
+    <div class="text-center pb-5">
+        <h2>Selling Impounds?</h2>
+        <p class="text-muted">Auto Auction Hub is built for tow yards and impounds.</p>
+    </div>
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4 row-box">
+                <app-dynamic-card
+                    cardType="infoCard"
+                    iconClass="bi bi-pc-display-horizontal"
+                    iconSize="2"
+                    iconColor="rgb(131, 131, 131)"
+                    title="List Vehicles"
+                    description="Quickly list your vehicles for sale and clear out your unclaimed impound yard inventory."
+                ></app-dynamic-card>
+            </div>
+            <div class="col-md-4 row-box">
+                <app-dynamic-card
+                    cardType="infoCard"
+                    iconClass="bi bi-person-fill-add"
+                    iconSize="2"
+                    iconColor="rgb(131, 131, 131)"
+                    title="More Buyers"
+                    description="When you use Auto Auction Hub, you can reach a significantly wider audience of interested buyers."
+                ></app-dynamic-card>
+            </div>
+            <div class="col-md-4 row-box">
+              <app-dynamic-card
+                    cardType="infoCard"
+                    iconClass="bi bi-lock-fill"
+                    iconSize="2"
+                    iconColor="rgb(131, 131, 131)"
+                    title="Secure and Legal"
+                    description="Our team has built the platform to ensure auctions abide by local laws and regulations."
+                ></app-dynamic-card>
+            </div>
+        </div>
+    </section>
+</div>
+<app-contact-form></app-contact-form>

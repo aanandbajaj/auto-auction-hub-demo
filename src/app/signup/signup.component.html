@@ -1,0 +1,62 @@
+
+<app-header></app-header>
+
+<div class="container-fluid light-grey-bg">
+
+  <div *ngIf="isSignupComplete" class="custom-login-box p-4">
+    <h2 class="heading-color">Next Steps</h2>
+    <h5>Get Verified</h5>
+    <p>
+      Watch out in your inbox for an email from us on next steps to verify your identity.
+      This should usually take 24 hours.
+      P.S. Check your spam folder.
+    </p>
+    <h5>Start Bidding</h5>
+    <p>
+      Once your identity is verified, you can start bidding on vehicles on our platform!
+    </p>
+  </div>
+  <div *ngIf="!isSignupComplete" class="custom-login-box p-4">
+    <h2 class="text-center mb-4">Sign Up</h2>
+    <form id="signup" class="form" (ngSubmit)="signup()" #signupForm="ngForm">
+
+      <!-- Required Fields -->
+      <div class="form-group">
+        <label class="required" for="firstName">First Name</label>
+        <span *ngIf="firstNameInput.errors && firstNameInput.errors['required']" class="text-danger"> *</span>
+        <input type="text" class="form-control" id="firstName" name="firstName" required [(ngModel)]="firstName"
+          #firstNameInput="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="lastName">Last Name</label>
+        <span *ngIf="lastNameInput.errors && lastNameInput.errors['required']" class="text-danger"> *</span>
+        <input type="text" class="form-control" id="lastName" name="lastName" required [(ngModel)]="lastName"
+          #lastNameInput="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="homeAddress">Home Address</label>
+        <span *ngIf="homeAddressInput.errors && homeAddressInput.errors['required']" class="text-danger"> *</span>
+        <input type="text" class="form-control" id="homeAddress" name="homeAddress" required [(ngModel)]="homeAddress"
+          #homeAddressInput="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="email">Email</label>
+        <span *ngIf="emailInput.errors && emailInput.errors['required']" class="text-danger"> *</span>
+        <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="email"
+          #emailInput="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label class="required" for="phoneNumber">Mobile Phone</label>
+        <span *ngIf="phoneNumberInput.errors && phoneNumberInput.errors['required']" class="text-danger"> *</span>
+        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required [(ngModel)]="phoneNumber"
+          #phoneNumberInput="ngModel">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block mt-4" [disabled]="signupForm.invalid">Sign Up</button>
+    </form>
+  </div>
+</div>

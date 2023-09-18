@@ -1,0 +1,36 @@
+<div [ngClass]="cardType">
+    <ng-container *ngIf="cardType === 'infoCard'">
+        <div class="custom-box">
+            <i [class]="iconClass" [style.fontSize.rem]="iconSize" [style.color]="iconColor"></i>
+            <h3>{{ title }}</h3>
+            <p>{{ description }}</p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="cardType === 'auctionCard'">
+        <div class="custom-box">
+            <h4>{{ title}}</h4>
+            <p class="text-muted">
+                <i class="bi bi-calendar3"></i> {{ date }}
+            </p>
+            <p class="text-muted">
+                <i class="bi bi-car-front-fill"></i> {{ numVehicles }}
+            </p>
+            <p class="text-muted">
+                <i class="bi bi-geo-alt-fill"></i> {{ location}}
+            </p>
+            <a [routerLink]="['/listings',auctionId]" class="btn btn-primary clear-button">
+                View
+            </a>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="cardType === 'listingCard'">
+        <img [src]="imageUrl" alt="Car Image" />
+        <div class="details-container">
+            <h4>{{ carName }}</h4>
+            <p class="auction-price">{{ auctionPrice }}</p>
+        </div>
+    </ng-container>
+
+</div>

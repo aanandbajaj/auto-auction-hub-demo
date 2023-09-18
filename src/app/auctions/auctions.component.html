@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<div class="container heading-div">
+    <h3 class="auction-link heading-color">Upcoming Auctions</h3>
+</div>
+<div class="container" *ngIf="!isLoadingData">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let auction of this.auctions">
+            <app-dynamic-card cardType="auctionCard" [title]="auction.towing_company" [location]="auction.location"
+                [numVehicles]="auction.numVehicles" [date]="formatDate(auction.time)"
+                [auctionId]="auction.id"></app-dynamic-card>
+        </div>
+    </div>
+</div>
+<div class="container loading" *ngIf="isLoadingData">
+    <img src="../assets/loading.gif" alt="Loading" />
+</div>

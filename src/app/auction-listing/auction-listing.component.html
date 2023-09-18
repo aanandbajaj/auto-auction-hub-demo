@@ -1,0 +1,125 @@
+
+<app-header></app-header>
+
+<div *ngIf="loading; else listingContent" class="container loading text-center">
+    <img src="../assets/loading.gif" alt="Loading" />
+</div>
+<ng-template #listingContent>
+    <div class="d-flex align-items-center justify-content-center py-2" [ngClass]="{'bg-primary': auctionStatus === 'Active', 'bg-secondary': auctionStatus === 'Ended'}">
+        <div class="countdown-banner text-white text-center">
+            <p class="mb-0" *ngIf="auctionStatus === 'Active'">Auction starts at <strong>{{ formatDate(start_time) }}</strong> and ends at <strong>{{ formatDate(end_time) }}</strong></p>
+            <p class="mb-0" *ngIf="auctionStatus === 'Ended'"><strong>Sorry, this auction has ended.</strong></p>
+        </div>
+    </div>
+    
+    <div class="container heading-div">
+        <h3 class="auction-link heading-color">{{ carName }}</h3>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="carousel-container">
+                        <ngb-carousel *ngIf="specificListing && imageCount" [interval]="0">
+                            <ng-template ngbSlide *ngFor="let imageNum of getImageNumbers(imageCount)">
+                                <div class="picsum-img-wrapper">
+                                    <img [src]="'../assets/images/Cars/' + specificListing.listingCode + '_' + imageNum + '.jpg'"
+                                        [alt]="'Slide ' + imageNum" />
+                                </div>
+                            </ng-template>
+                        </ngb-carousel>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <!-- Seller Info -->
+                                <div class="seller-info">
+                                    <h4>Seller Info</h4>
+                                    <p><i class="bi bi-shop"></i> {{relatedAuction.towing_company}}</p>
+                                    <p><i class="bi bi-envelope"></i> {{relatedAuction.seller_email}}</p>
+                                    <p><i class="bi bi-phone"></i> {{relatedAuction.seller_phone}}</p>
+                                    <p><i class="bi bi-geo-alt"></i> {{relatedAuction.location}}</p>
+                                </div>
+
+                                <!-- Buyer Info -->
+                                <div class="buyer-info">
+                                    <h4>Buyer Info</h4>
+                                    Bidding Starts 09:30 pm, 7/05
+                                    Event Starts 01:30 pm, 7/08
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <!-- Vehicle details table -->
+                                <div class="vehicle-details">
+                                    <h4>Vehicle Details</h4>
+                                    <table class="table">
+                                        <tbody>
+                                            <ng-container *ngFor="let item of specificListing | keyvalue">
+                                                <tr>
+                                                    <th>{{ item.key }}</th>
+                                                    <td>{{ item.value }}</td>
+                                                </tr>
+                                            </ng-container>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="custom-box-flex">
+                    <div class="card-content">
+                        <h4>{{ carName }}</h4>
+                        <div class="auction-bid border border-muted p-2">
+                            <small class="text-muted">Current Max Bid</small>
+                            <!-- Display current max bid text below -->
+                            <div class="bid-amount">${{maxBid}}</div>
+                        </div>
+                        <div *ngIf="isLoggedIn()">
+                            <div class="user-bid-info alert alert-primary" role="alert" *ngIf="userRecentBid !== null">
+                                <p>Your most recent bid is: <strong>${{ userRecentBid }}</strong></p>
+                            </div>
+                            <div class="user-bid-info alert alert-primary" role="alert" *ngIf="userRecentBid === null">
+                                <p>You have no active bids.</p>
+                            </div>
+
+                        </div>
+                        <div class="bid-info">
+                            <!-- Display alert if user is not logged in -->
+                            <div class="alert alert-secondary" role="alert" *ngIf="auctionStatus === 'Ended'">
+                                This listing is no longer accepting any more bids as the auction has ended. 
+                            </div>
+                            <div *ngIf="auctionStatus === 'Active'">
+                                <div class="alert alert-warning" role="alert" *ngIf="!isLoggedIn()">
+                                    You must be logged in to bid online.
+                                </div>
+                                <!-- Display bid submission textbox and button if user is logged in -->
+                                <div *ngIf="isLoggedIn()" class="bid-form w-100">
+                                    <form class="form-group" (ngSubmit)="submitBid()">
+                                        <label for="userBidAmount">Submit New Bid ($):</label>
+                                        <input #userBidAmountInput type="number" class="form-control" id="userBidAmount">
+                                        <button type="submit" class="btn btn-primary mt-2">Submit Bid</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="isSuccess !== null" class="user-bid-info alert alert-center"
+                            [ngClass]="{ 'alert-success': isSuccess, 'alert-danger': !isSuccess }" role="alert">
+                            <p>{{ alertMessage }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

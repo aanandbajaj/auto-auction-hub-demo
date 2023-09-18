@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="container heading-div">
+  <h3 class="heading-color">{{ date }}</h3>
+  <h4>{{ title }}</h4>
+</div>
+<div class="container loading" *ngIf="isLoading">
+    <img src="../assets/loading.gif" alt="Loading" />
+</div>
+
+<div class="container" *ngIf="!isLoading">
+  <div class="row">
+    <div class="col-md-4 card-container" *ngFor="let data of listings">
+      <a class="text-decoration-none" [routerLink]="['/auction-listing', data.listingCode]">
+        <app-dynamic-card
+          cardType="listingCard"
+          [carName]="data.make + ' ' + data.model"
+          [auctionPrice]="'$' + data.maxBid"
+          [imageUrl] ="data.previewImageLink"
+        ></app-dynamic-card>
+      </a>    
+    </div>
+  </div>
+</div>

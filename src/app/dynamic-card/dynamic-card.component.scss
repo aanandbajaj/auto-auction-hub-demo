@@ -1,0 +1,47 @@
+.custom-box {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-bottom: 5%;
+    /* Add this line for the outline */
+}
+
+.listingCard {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);    background-color: #fff;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    /* Add this line for the outline */
+}
+
+.listingCard img {
+    width: 100%;
+    border-radius: 10px 10px 0 0; /* Apply rounded corners only to the top */
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+    /* Adjust the height as desired */
+}
+
+.auctionCard, .listingCard{
+    cursor: pointer
+}
+
+.auctionCard:hover, .listingCard:hover{
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.details-container{
+    padding: 20px;
+}
+
+.auction-price{
+    font-size: 25px;
+    color: gray;
+}

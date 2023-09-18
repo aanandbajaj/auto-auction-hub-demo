@@ -1,0 +1,31 @@
+auction_ID,currentPrice,VIN,year,make,model,color,catalyticConverter,keyStatus,odometer,startStatus,engineType,documentationType,transmission,body,fuelType
+1,250,Waukjafmxca054889,2012,Audi,A3,Blue,Yes,Has keys,76000,Runs and Drives,"L4, 2.0L Turbo",Lien Sale,Automatic,4 Door,Diesel
+1,500,Wbaea53588cv90026,2008,BMW,6 Series,Gray,Yes,Has keys,120000,Runs and Drives,"V8, 4.8L",Lien Sale,6 Speed Automatic,2 Door,Gasoline
+1,800,1hgem22044l028716,2004,Honda,Civic,Red,Yes,Has keys,206000,Runs and Drives,"L4, 1.7L SOHC",Lien Sale,Automatic,2 Door,Gasoline
+2,1800,jh4ka4657lc010698,1990,Acura,Integra,Red,Yes,Has keys,180000,Runs and Drives,"L4, 1.8L DOHC",Clean Title,Manual,2 Door,Gasoline
+2,800,wbaea53588cv90026,2008,BMW,6 Series,Gray,Yes,Has keys,120000,Runs and Drives,"V8, 4.8L",Lien Sale,6 Speed Automatic,2 Door,Gasoline
+2,2500,1hgcm82683a090095,2003,Honda,Accord,Black,Yes,Has keys,130000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+3,1200,3b7hc12z2xm587382,1999,Dodge,Ram 1500,Green,Yes,No keys,150000,Doesn't Start,"V8, 5.2L",Abandoned,Manual,2 Door,Gasoline
+3,600,5tdza22c2x5051433,1999,Toyota,Sienna,Silver,Yes,Has keys,180000,Runs and Drives,"V6, 3.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+3,900,1hgcm82683a090095,2003,Honda,Accord,Black,Yes,Has keys,130000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+4,1400,1c4njcea0gd790593,2016,Jeep,Compass,White,Yes,Has keys,50000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+4,1000,1g6kd57y38u100315,2008,Cadillac,CTS,Black,Yes,Has keys,110000,Runs and Drives,"V6, 3.6L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+4,1800,5npeb4ac4dh655219,2013,Hyundai,Sonata,Blue,Yes,Has keys,85000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+5,2200,kmhdn46d55u106301,2005,Hyundai,Elantra,White,Yes,Has keys,150000,Runs and Drives,"L4, 2.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+5,1700,knagd126845356745,2008,Kia,Spectra,Silver,Yes,Has keys,120000,Runs and Drives,"L4, 2.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+5,2500,1g3nl52e3vm811230,1997,Oldsmobile,Achieva,Green,Yes,No keys,100000,Doesn't Start,"L4, 2.4L DOHC",Abandoned,Automatic,2 Door,Gasoline
+6,1200,1hgcm82683a090095,2003,Honda,Accord,Black,Yes,Has keys,130000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+6,1800,5npeb4ac4dh655219,2013,Hyundai,Sonata,Blue,Yes,Has keys,85000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+6,2200,kmhdn46d55u106301,2005,Hyundai,Elantra,White,Yes,Has keys,150000,Runs and Drives,"L4, 2.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+7,1400,1c4njcea0gd790593,2016,Jeep,Compass,White,Yes,Has keys,50000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+7,1000,1g6kd57y38u100315,2008,Cadillac,CTS,Black,Yes,Has keys,110000,Runs and Drives,"V6, 3.6L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+7,1800,5npeb4ac4dh655219,2013,Hyundai,Sonata,Blue,Yes,Has keys,85000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+8,2200,kmhdn46d55u106301,2005,Hyundai,Elantra,White,Yes,Has keys,150000,Runs and Drives,"L4, 2.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+8,1700,knagd126845356745,2008,Kia,Spectra,Silver,Yes,Has keys,120000,Runs and Drives,"L4, 2.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+8,2500,1g3nl52e3vm811230,1997,Oldsmobile,Achieva,Green,Yes,No keys,100000,Doesn't Start,"L4, 2.4L DOHC",Abandoned,Automatic,2 Door,Gasoline
+9,1200,1hgcm82683a090095,2003,Honda,Accord,Black,Yes,Has keys,130000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+9,1800,5npeb4ac4dh655219,2013,Hyundai,Sonata,Blue,Yes,Has keys,85000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+9,2200,kmhdn46d55u106301,2005,Hyundai,Elantra,White,Yes,Has keys,150000,Runs and Drives,"L4, 2.0L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+10,1400,1c4njcea0gd790593,2016,Jeep,Compass,White,Yes,Has keys,50000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+10,1000,1g6kd57y38u100315,2008,Cadillac,CTS,Black,Yes,Has keys,110000,Runs and Drives,"V6, 3.6L DOHC",Lien Sale,Automatic,4 Door,Gasoline
+10,1800,5npeb4ac4dh655219,2013,Hyundai,Sonata,Blue,Yes,Has keys,85000,Runs and Drives,"L4, 2.4L DOHC",Lien Sale,Automatic,4 Door,Gasoline
