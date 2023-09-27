@@ -10,9 +10,8 @@ The Auto Auction Hub Web Application is a platform for buying and selling impoun
 - TypeScript
 - HTML/CSS
 - Bootstrap
-- Node.js (Backend)
-- Express.js (Backend)
-- MongoDB (Database)
+- Flask (Backend)
+- MySQL (Database)
 - Other libraries and packages (see package.json for details)
 
 ## Components
@@ -61,34 +60,11 @@ The Auto Auction Hub Web Application is a platform for buying and selling impoun
 
 ## Services
 
-The Auto Auction Hub Web Application utilizes various services to manage and handle data, user authentication, and communication with the backend server. Here's an overview of the key services used in the application:
-
-### 1. **AuthService**
-
-- **Description**: The AuthService manages user authentication and login/logout functionality.
-- **Purpose**: It allows users to securely log in to their accounts and access restricted features, such as bidding and the user dashboard.
-
-### 2. **BiddingService**
-
-- **Description**: The BiddingService handles all operations related to placing bids on vehicle listings.
-- **Purpose**: It enables users to place bids on their desired vehicles during auctions and retrieves information about the highest bid for a listing.
-
-### 3. **ListingService**
-
-- **Description**: The ListingService interacts with the backend to retrieve and display vehicle listings.
-- **Purpose**: It provides details about available listings, including images and bid counts, and allows users to access specific vehicle details.
-
-### 4. **AuctionsService**
-
-- **Description**: The AuctionsService manages auctions, including fetching auction data and checking auction status.
-- **Purpose**: It ensures that users can view ongoing and upcoming auctions, as well as access information about the status of a specific auction.
-
-### 5. **ContactFormService**
-
-- **Description**: The ContactFormService handles user inquiries and messages sent via the contact form.
-- **Purpose**: It allows users to reach out to platform administrators for assistance or questions regarding the auction process.
-
-These services play a crucial role in ensuring the smooth operation of the Auto Auction Hub Web Application, from user authentication to accessing auction listings and placing bids. They enable a seamless user experience and efficient communication with the backend server.
+- **AuthService**: Manages user authentication and login/logout functionality.
+- **BiddingService**: Handles all operations related to placing bids on vehicle listings.
+- **ListingService**: Interacts with the backend to retrieve and display vehicle listings.
+- **AuctionsService**: Manages auctions, including fetching auction data and checking auction status.
+- **ContactFormService**: Handles user inquiries and messages sent via the contact form.
 
 ## Accessing the Application
 
@@ -105,4 +81,4 @@ Please note that these credentials are temporary and should be replaced with act
 
 ## Contact
 
-If you have any questions or encounter issues, please contact us at [support@auto-auction-hub.com](mailto:support@auto-auction-hub.com).
+If you have any questions or encounter issues, please contact us at [anand222@gmail.com](mailto:anand222@gmail.com).
