@@ -22,10 +22,10 @@
                 <div class="row">
                     <div class="carousel-container">
                         <ngb-carousel *ngIf="specificListing && imageCount" [interval]="0">
-                            <ng-template ngbSlide *ngFor="let imageNum of getImageNumbers(imageCount)">
+                            <ng-template ngbSlide *ngFor="let imageLink of this.imageLinks; let i = index">
                                 <div class="picsum-img-wrapper">
-                                    <img [src]="'../assets/images/Cars/' + specificListing.listingCode + '_' + imageNum + '.jpg'"
-                                        [alt]="'Slide ' + imageNum" />
+                                    <img [src]="imageLink" 
+                                        [alt]="'Slide ' + (i + 1)" />
                                 </div>
                             </ng-template>
                         </ngb-carousel>

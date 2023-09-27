@@ -22,6 +22,7 @@ export class AuctionListingComponent implements OnInit, AfterViewInit {
   end_time:any;
   slideIndex: number;
   imageCount: number;
+  imageLinks: any;
   userRecentBid: number;
   isSuccess: boolean | null = null;
   alertMessage: string;
@@ -61,9 +62,15 @@ export class AuctionListingComponent implements OnInit, AfterViewInit {
         this.auctionsService.getAuctionByListingId(this.listingCode)
       ]).subscribe(([listingData, imageData, recentBidData, maxBidData,auctionData]) => {
         this.specificListing = listingData.listing[0];
-        console.log(recentBidData);
         this.carName = this.specificListing.make + ' ' + this.specificListing.model;
+
+        // num of images to cycle through
         this.imageCount = imageData.image_count;
+
+        // actual image links
+        this.imageLinks = imageData.image_links
+        console.log(this.imageLinks)
+
         if (recentBidData !== null && recentBidData.hasOwnProperty('amount')) {
           this.userRecentBid = recentBidData.amount;
         }
