@@ -1,5 +1,9 @@
 # Auto Auction Hub Web Application
 
+## Important Note
+This is the repository for the **frontend**. The **backend** code is located here: [link to backend code](https://github.com/aanandbajaj/auto-auction-hub-backend-demo).
+
+
 ## Overview
 
 This web app is a platform for buying and selling impounded vehicles in Canada. It provides a user-friendly interface for tow yards and impounds to list their vehicles for sale and reach a wider audience of interested buyers. This README provides an overview of the different components and features of the application.
