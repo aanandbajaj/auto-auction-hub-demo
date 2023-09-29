@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Auto Auction Hub Web Application is a platform for buying and selling impounded vehicles in Canada. It provides a user-friendly interface for tow yards and impounds to list their vehicles for sale and reach a wider audience of interested buyers. This README provides an overview of the different components and features of the application.
+This web app is a platform for buying and selling impounded vehicles in Canada. It provides a user-friendly interface for tow yards and impounds to list their vehicles for sale and reach a wider audience of interested buyers. This README provides an overview of the different components and features of the application.
 
 ### Technologies Used
 
@@ -81,4 +81,4 @@ Please note that these credentials are temporary and should be replaced with act
 
 ## Contact
 
-If you have any questions or encounter issues, please contact us at [anand222@gmail.com](mailto:anand222@gmail.com).
+If you have any questions or encounter issues, please contact us at [aanand222@gmail.com](mailto:aanand222@gmail.com).
